@@ -1,0 +1,40 @@
+/* layout.css - Header, Footer, and Grid Structures */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.navbar .logo {
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.navbar a:hover, 
+.navbar button:hover {
+  color: var(--accent-color);
+  transition: color 0.3s ease;
+}
+
+nav button {
+  background: none;
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+}

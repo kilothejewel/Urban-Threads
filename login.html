@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Urban Threads</title>
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/layout.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Urban Threads</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main style="padding: 2rem; max-width: 400px; margin: auto;">
+    <h1>Login to your account</h1>
+    <form id="login-form" style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem;">
+      <input type="email" id="email" placeholder="Email" required style="padding: 0.5rem;">
+      <input type="password" id="password" placeholder="Password" required style="padding: 0.5rem;">
+      <button type="submit" style="padding: 0.5rem; background: var(--primary-color); color: white; border: none; cursor: pointer;">Login</button>
+    </form>
+    <p id="error-message" style="color: red; margin-top: 1rem; display: none;"></p>
+  </main>
+</body>
+</html>
