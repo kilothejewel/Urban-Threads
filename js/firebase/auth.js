@@ -1,4 +1,4 @@
-import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.x.x/firebase-auth.js";
+import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
 import { auth } from "./firebase-config.js";
 
 export function initAuthListener() {
@@ -8,8 +8,6 @@ export function initAuthListener() {
   const loginItem = document.getElementById("nav-item-login");
   const logoutItem = document.getElementById("nav-item-logout");
   const cartItem = document.getElementById("nav-item-cart");
-
-  // TODO: Use onAuthStateChanged to toggle elements in the UI
 
   onAuthStateChanged(auth, (user) => {
     if (user) {
