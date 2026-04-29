@@ -84,6 +84,24 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log("Urban Threads App Loaded!");
   initAuthListener();
   fetchAndRenderProducts(); // Call our new function!
+
+  // Search Bar Functionality
+  const searchInput = document.querySelector('.search-container input');
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      const searchTerm = e.target.value.toLowerCase();
+      const productCards = document.querySelectorAll('.product-card');
+      
+      productCards.forEach(card => {
+        const title = card.querySelector('.product-title').innerText.toLowerCase();
+        if (title.includes(searchTerm)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  }
 });
 
 // Toast Notification Helper (Sprint 4 Polish)

@@ -9,17 +9,29 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="logo">Urban Threads</div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li id="nav-item-cart"><a href="cart.html" style="color: var(--accent-color);">Cart</a></li>
-        <li id="nav-item-login" style="display:none;"><a href="login.html">Login</a></li>
-        <li id="nav-item-logout"><button id="btn-logout">Logout</button></li>
-      </ul>
-    </nav>
-  </header>
+  <div class="header-wrapper">
+    <header>
+      <nav class="navbar">
+        <div class="logo"><a href="index.html">Urban Threads</a></div>
+        <div class="search-container">
+          <input type="search" placeholder="Search Items, Brands & Categories">
+        </div>
+        <ul class="nav-actions">
+          <li id="nav-item-login"><a href="login.html">Sign In / Register</a></li>
+          <li id="nav-item-logout" style="display:none;"><button id="btn-logout">Logout</button></li>
+          <li id="nav-item-cart"><a href="cart.html" style="color: var(--accent-color);">Cart</a></li>
+        </ul>
+      </nav>
+    </header>
+    <ul class="secondary-nav">
+      <li><a href="#">Mens</a></li>
+      <li><a href="#">Ladies</a></li>
+      <li><a href="#">Kids</a></li>
+      <li><a href="#">Shoes</a></li>
+      <li><a href="#">Everyday Basics</a></li>
+      <li><a href="#" style="color: var(--accent-color);">Promos</a></li>
+    </ul>
+  </div>
 
   <main style="padding: 2rem;">
     <h1>Your Shopping Cart</h1>

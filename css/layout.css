@@ -1,26 +1,64 @@
 /* layout.css - Header, Footer, and Grid Structures */
 
+.header-wrapper {
+  background-color: #fff;
+  border-bottom: 1px solid #eaeaea;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
 .navbar {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
   align-items: center;
-  padding: 1.5rem 2rem;
-  background-color: var(--primary-color);
-  color: #fff;
+  padding: 1.25rem 2rem;
+  background-color: #fff;
+  color: var(--text-color);
 }
 
 .navbar .logo {
-  font-weight: 800;
-  font-size: 1.5rem;
+  font-weight: 900;
+  font-size: 1.8rem;
   letter-spacing: -0.05em;
   text-transform: uppercase;
+  color: var(--primary-color);
 }
 
-.navbar .nav-links {
+/* Search Bar (Centered) */
+.search-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.search-container input {
+  width: 90%;
+  max-width: 600px;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #e5e7eb;
+  background-color: #f9fafb;
+  border-radius: 9999px; /* Pill shape */
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.search-container input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(255, 62, 62, 0.1);
+}
+
+.navbar .nav-actions {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
   align-items: center;
+  justify-content: flex-end;
+  font-weight: 600;
+  font-size: 0.95rem;
 }
 
 .navbar a:hover, 
@@ -34,7 +72,52 @@ nav button {
   border: none;
   color: inherit;
   font-family: inherit;
-  font-size: 1rem;
+  font-size: 0.95rem;
   cursor: pointer;
   font-weight: 600;
+}
+
+/* Secondary Category Nav */
+.secondary-nav {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  border-bottom: 1px solid #eaeaea;
+  list-style: none;
+  font-weight: 800;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.secondary-nav a {
+  color: var(--text-color);
+  letter-spacing: 0.05em;
+}
+
+.secondary-nav a:hover, .secondary-nav a.active {
+  color: var(--accent-color);
+}
+
+/* Promo Banner */
+.promo-banner {
+  background-color: #5c623c; /* Olive green like the example */
+  color: white;
+  text-align: center;
+  padding: 0.75rem;
+  font-weight: 800;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .secondary-nav {
+    display: none; /* Hide secondary nav on mobile for simplicity, could add a hamburger menu */
+  }
 }
