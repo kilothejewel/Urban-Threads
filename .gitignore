@@ -8,3 +8,6 @@ js/firebase/firebase-config.js
 # System files
 .DS_Store
 Thumbs.db
+.xml
+.zip
+*.md    

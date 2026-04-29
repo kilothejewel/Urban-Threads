@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     console.log("Attempting to log in...", email);
 
-    // TODO: Use signInWithEmailAndPassword(auth, email, password)
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         console.log("Logged in successfully!", userCredential.user.email);

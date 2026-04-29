@@ -1,5 +1,6 @@
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
 import { auth } from "./firebase-config.js";
+import { updateCartBadge } from "../utils/cartStore.js";
 
 export function initAuthListener() {
   console.log("Auth listener initializing. Waiting for Firebase code...");
@@ -23,5 +24,8 @@ export function initAuthListener() {
       logoutItem.style.display = "none";
       cartItem.style.display = "none";
     }
+    
+    // Auth resolved, so now we can accurately fetch the user's cart!
+    updateCartBadge();
   });
 }
