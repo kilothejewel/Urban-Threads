@@ -1,10 +1,13 @@
 import { auth } from "../firebase/firebase-config.js";
 import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
+import { initAuthListener } from "../firebase/auth.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const registerForm = document.getElementById("register-form");
   const errorMessage = document.getElementById("error-message");
   const successMessage = document.getElementById("success-message");
+
+  initAuthListener();
 
   registerForm.addEventListener("submit", (e) => {
     e.preventDefault();

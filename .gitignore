@@ -2,9 +2,6 @@
 node_modules/
 package-lock.json
 
-# Environment variables & Secrets
-js/firebase/firebase-config.js
-
 # System files
 .DS_Store
 Thumbs.db

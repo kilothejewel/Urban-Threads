@@ -1,11 +1,14 @@
 import { auth } from "../firebase/firebase-config.js";
 // import the signInWithEmailAndPassword function from the Firebase Auth CDN
 import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
+import { initAuthListener } from "../firebase/auth.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const loginForm = document.getElementById("login-form");
   const errorMessage = document.getElementById("error-message");
   const successMessage = document.getElementById("success-message");
+
+  initAuthListener();
 
   // Handle Login
   loginForm.addEventListener("submit", (e) => {
