@@ -32,7 +32,7 @@ async function fetchAndRenderProducts() {
           />
           <div class="product-info">
             <h3 class="product-title">${product.name}</h3>
-            <p class="product-price">$${Number(product.price).toFixed(2)}</p>
+            <p class="product-price">R${Number(product.price).toFixed(2)}</p>
             <button class="btn-primary add-to-cart-btn" data-id="${doc.id}">
               Add to Cart
             </button>

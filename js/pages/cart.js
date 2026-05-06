@@ -63,7 +63,7 @@ async function renderCart() {
         <img src="${item.imageUrl}" style="width: 50px; height: 50px; border-radius: 8px; object-fit: cover;">
         <div>
           <h4 style="margin:0;">${item.name}</h4>
-          <span style="color: #666;">$${Number(item.price).toFixed(2)} x ${item.quantity}</span>
+          <span style="color: #666;">R${Number(item.price).toFixed(2)} x ${item.quantity}</span>
         </div>
       </div>
     `;
@@ -79,5 +79,5 @@ async function renderCart() {
 
   // Show checkout and total
   checkoutSection.style.display = "block";
-  cartTotal.innerText = `$${total.toFixed(2)}`;
+  cartTotal.innerText = `R${total.toFixed(2)}`;
 }
