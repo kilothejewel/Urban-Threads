@@ -22,16 +22,20 @@ document.addEventListener("DOMContentLoaded", () => {
         successMessage.style.display = "block";
         errorMessage.style.display = "none";
 
-        // Redirect directly to home page after a short delay
-        setTimeout(() => {
-          window.location.href = "index.html";
-        }, 1500);
+        // Show explicit alert so user knows it worked
+        alert("Account created successfully! You are now logged in.");
+
+        // Redirect directly to home page after user dismisses alert
+        window.location.href = "index.html";
       })
       .catch((error) => {
         console.error("Registration failed:", error.code, error.message);
-        errorMessage.innerText = error.message; // Use Firebase error message for details like weak password
+        errorMessage.innerText = error.message; // Use Firebase error message
         errorMessage.style.display = "block";
         successMessage.style.display = "none";
+        
+        // Show explicit alert so user knows something went wrong
+        alert("Registration failed: " + error.message);
       });
   });
 });

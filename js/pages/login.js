@@ -19,6 +19,13 @@ document.addEventListener("DOMContentLoaded", () => {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         console.log("Logged in successfully!", userCredential.user.email);
+        successMessage.innerText = "Logged in successfully!";
+        successMessage.style.display = "block";
+        errorMessage.style.display = "none";
+        
+        // Show explicit alert so user knows it worked
+        alert("Logged in successfully! Welcome back.");
+        
         // Redirect the user back to the home page!
         window.location.href = "index.html";
       })
@@ -28,6 +35,9 @@ document.addEventListener("DOMContentLoaded", () => {
           "Incorrect email or password. Please try again.";
         errorMessage.style.display = "block";
         successMessage.style.display = "none";
+        
+        // Show explicit alert so user knows something went wrong
+        alert("Login failed: Incorrect email or password. Please try again.");
       });
   });
 });
