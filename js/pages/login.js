@@ -15,6 +15,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const errorMessage = document.getElementById("error-message");
   const successMessage = document.getElementById("success-message");
 
+  // Check URL params for action=register
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('action') === 'register') {
+    loginContainer.style.display = "none";
+    registerContainer.style.display = "block";
+  }
+
   // Toggle between login and register forms
   showRegisterLink.addEventListener("click", (e) => {
     e.preventDefault();
